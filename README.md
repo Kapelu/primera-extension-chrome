@@ -5,3 +5,5 @@ Esta es una extensión de Chrome simple que muestra una ventana emergente cuando
 Ábralo en Chrome yendo a `chrome://extensions` y haga clic en "Cargar extensión desempaquetada..." y seleccione la carpeta `extension`.
 
 luego haga clic en el icono de la extensión y debería ver una ventana emergente.
+
+La documentación para poder crear mas extensiones la podés encontrar [Aquí](https://developer.chrome.com/docs/extensions/mv3/intro/)
