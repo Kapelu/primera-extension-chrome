@@ -1,4 +1,4 @@
-<h2 align='center'> 😊 &nbsp;Crea una extensión para navegadores basados en Chromiun, paso a paso</h2>
+<h2 align='center'> Crea una extensión para navegadores basados en Chromiun &nbsp; &nbsp;😊 &nbsp;</h2>
 <br>
 
 En este tutorial les voy a mostrar como podemos crear su primera extensión navegadores basados en Chromiun. Los guiaré desde lo más básico, como es crear el archivo de manifiesto (JSON), una página emergente o tambien llamada Popup, ademas de añadir codigo de Javascript para que el usuario pueda interactuar con la extension, y como hacer para activar la extensión en nuestro navegador.
