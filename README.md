@@ -1,9 +1,9 @@
-<h2 align='center'> 😊 &nbsp;Crea una extensión de Google Chrome paso a paso</h2>
+<h2 align='center'> 😊 &nbsp;Crea una extensión para navegadores basados en Chromiun, paso a paso</h2>
 <br>
 
-En este tutorial les voy a enseñar a crear su primera extensión de Google Chrome!. los guiaré desde lo más basico como es crear el archivo de manifiesto (JSON), una página emergente o tambien llamada Popup, ademas de añadir codigo de Javascript para que el usuario pueda interactuar con la extension, y como hacer para activar la extensión en nuestro navegador.
+En este tutorial les voy a mostrar como podemos crear su primera extensión navegadores basados en Chromiun. Los guiaré desde lo más básico, como es crear el archivo de manifiesto (JSON), una página emergente o tambien llamada Popup, ademas de añadir codigo de Javascript para que el usuario pueda interactuar con la extension, y como hacer para activar la extensión en nuestro navegador.
 
-Y aunque el titulo dice para Google Chrome, al existir otros navegadores basados en Chromiun, como Brave, Opera, Microsoft Edge y el mismo Chromiun, esta extension puede funcionar exactamente igual para esos proyectos tambien.
+Al existir otros navegadores basados en Chromiun, como Brave, Opera, Microsoft Edge y el mismo Chromiun, esta extension puede funcionar exactamente igual para esos proyectos.
 
 > ## Requerimientos
 
