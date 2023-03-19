@@ -10,6 +10,7 @@ Y aunque el titulo dice para Google Chrome, al existir otros navegadores basados
 HTML, CSS, y Javascript. Este tutorial es adecuado para desarrolladores web frontend que tienen conocimientos básicos de HTML, CSS y JavaScript. No se requiere experiencia previa en la creación de extensiones para Chrome, pero se recomienda estar familiarizado con los conceptos básicos de crear sitios web sencillos.
 
 ¡Empecemos!
+<br>
 
 > ## Creación del Proyecto
 
@@ -22,6 +23,8 @@ Puedes crearlo esta carpeta, dando click derecho, "crear carpeta", pero Si eres 
 mkdir primera-extension-chrome
 cd primera-extension-chrome
 ```
+<br>
+
 ## Abrelo con tu Editor
 
 Una vez creado abre tu proyecto con tu editor favorito, en mi caso usare Visual Studio Code. tambien puedes abrir este desde la consola usando.
@@ -81,31 +84,97 @@ Crea un archivo llamado `popup.html` en la raíz de tu proyecto y escribe el sig
 ```
 Este código define una página emergente simple que muestra un mensaje de bienvenida al usuario. También se define un estilo básico para centrar el contenido en la ventana emergente.
 
-Sube la Imagen
+> ## Sube la Imagen
 
-Como notas en el código anterior, es necesario cargar un logotipo, asi que dentro de la raiz de tu proyecto añade un imagen cualquiera, pero que tenga el mismo nombre icon128.png. De lo contrario si no lo añades no podras cargar tu extension.
+Como notas en el código anterior, es necesario cargar un logotipo, asi que dentro de la raiz de tu proyecto añade un imagen cualquiera, pero que tenga el mismo nombre `logo.png`. De lo contrario si no lo añades no podras cargar tu extension.
 
-Cargar la extensión en Chrome
+> ## Cargar la extensión en Chrome
+
 Una vez creada la extensión, ya podemos cargarla desde nuestro navegador de Google Chrome, así que puedes seguir estos pasos:
 
-Abre Google Chrome y escribe "chrome://extensions" en la barra de direcciones.
-Activa el "Modo de desarrollador" haciendo clic en el interruptor o Switch en la parte superior derecha de la página.
-Haz clic en "Cargar extension sin empaquetar" en la parte superior izquierda de la página.
-Selecciona la carpeta que contiene tu archivo manifest.json y haz clic en "Seleccionar carpeta".
-¡Listo! Tu extensión se ha cargado en Chrome. Ahora puedes hacer clic en el icono de la extensión para abrir la página emergente y ver el mensaje de bienvenida.
+* Abre Google Chrome y escribe "chrome://extensions" en la barra de direcciones.
 
-Interacción con el usuario
+* Activa el "Modo de desarrollador" haciendo clic en el interruptor o Switch en la parte superior derecha de la página.
+
+* Haz clic en "Cargar extension sin empaquetar" en la parte superior izquierda de la página.
+
+* Selecciona la carpeta que contiene tu archivo manifest.json y haz clic en "Seleccionar carpeta".
+
+> ¡Listo! Tu extensión se ha cargado en Chrome. Ahora puedes hacer clic en el icono de la extensión para abrir la página emergente y ver el mensaje de bienvenida.
+
+<br>
+
+> ## Interacción con el usuario
+
 Para agregar interacción con el usuario, puedes utilizar JavaScript en la página emergente. Por ejemplo, puedes agregar un botón que cambie el mensaje de bienvenida al hacer clic en él.
 
-En el archivo popup.html, agrega el siguiente código dentro del cuerpo:
+Para ello nesecitaras crear un archivo de javascript. Aqui voy a dar un simple ejemplo de como  agregando un boton se cambia el mensaje de tu extensión. 
 
-<button id="cambiar-mensaje">Cambiar mensaje</button>
+Deberás crear un archivo, por ejemplo `script.js` de la siguiente forma:
 
-<script>
-  const mensaje = document.querySelector('div');
-  const boton = document.getElementById('cambiar-mensaje');
+```js
+  const mensaje = document.querySelector('div')
+  const boton = document.getElementById('cambiar-mensaje')
   
   boton.addEventListener('click', () => {
-    mensaje.textContent = 'Nuevo mensaje';
-  });
-</script>
+    mensaje.textContent = 'Nuevo mensaje'
+  })
+```
+En el archivo `popup.html`, agrega el siguiente código dentro del cuerpo:
+
+```html
+<button id="cambiar-mensaje">Cambiar mensaje</button>
+```
+Este código agrega un botón a la página emergente y utiliza JavaScript para cambiar el mensaje de bienvenida cuando el usuario hace clic en el botón.
+
+Quedando el código final, de esta forma:
+
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi extensión</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Hola desde mi extensión</div>
+
+    <button id="cambiar-mensaje">Cambiar mensaje</button>
+
+    <script src="my_script.js"></script>
+  </body>
+</html>
+```
+
+Y el código de Javascript quedaría así.
+
+```js
+const mensaje = document.querySelector("div")
+const boton = document.getElementById("cambiar-mensaje")
+
+boton.addEventListener("click", () => {
+  mensaje.textContent = "Nuevo mensaje"
+})
+```
+
+A partir de aqui puedes seguir añadiendo interactividad, como por ejemplo ejecutar una alerta
+
+aunue tambien hacer peticiones HTTP, leer archivos o modificar la página, pero estos requieren distintos permisos que se deben añadir en el manifest y deben ser investigados en la documentación de [Extensiones de Google Chrome](https://developer.chrome.com/docs/extensions/)
+
+> ### ¡Listo! Ahora tu extensión tiene interacción, basada en código de Javascript.
+
+<br>
+
+Más Recursos
+[Tutorial Oficial de Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/)
