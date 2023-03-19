@@ -12,7 +12,7 @@ HTML, CSS, y Javascript. Este tutorial es adecuado para desarrolladores web fron
 ¡Empecemos!
 <br><br>
 
-## `Creación del Proyecto`
+#### `Creación del Proyecto`
 
 Primero, abre tu editor de código preferido y crea una carpeta para nuestra extensión, en mi caso la voy a llamar primera-extension-chrome.
 
@@ -25,7 +25,7 @@ cd primera-extension-chrome
 ```
 <br>
 
-## `Abrelo con tu Editor`
+#### `Abrelo con tu Editor`
 
 Una vez creado abre tu proyecto con tu editor favorito, en mi caso usare Visual Studio Code. tambien puedes abrir este desde la consola usando.
 
@@ -33,7 +33,7 @@ Una vez creado abre tu proyecto con tu editor favorito, en mi caso usare Visual 
 code .
 ```
 
-## `Creación del Manifest`
+#### `Creación del Manifest`
 
 Luego dentro de esta carpeta, crea un archivo llamado manifest.json. Este archivo es esencial para crear una extensión de Chrome, ya que describe la información de la extensión, incluyendo su nombre, descripción, icono y permisos.
 
@@ -57,7 +57,7 @@ El contenido del archivo `manifest.json` debe ser similar al siguiente:
 ```
 Este código define los metadatos básicos de la extensión, incluyendo su nombre, versión, descripción e icono. También especifica que la extensión tendrá una página emergente (popup) que se abrirá cuando el usuario haga clic en el icono de la extensión.
 
-## `Crear la página emergente o Popup`
+#### `Crear la página emergente o Popup`
 
 Crea un archivo llamado `popup.html` en la raíz de tu proyecto y escribe el siguiente código:
 
@@ -85,11 +85,11 @@ Crea un archivo llamado `popup.html` en la raíz de tu proyecto y escribe el sig
 ```
 Este código define una página emergente simple que muestra un mensaje de bienvenida al usuario. También se define un estilo básico para centrar el contenido en la ventana emergente.
 
-## `Sube la Imagen`
+#### `Sube la Imagen`
 
 Como notas en el código anterior, es necesario cargar un logotipo, asi que dentro de la raiz de tu proyecto añade un imagen cualquiera, pero que tenga el mismo nombre `logo.png`. De lo contrario si no lo añades no podras cargar tu extension.
 
-## `Cargar la extensión en Chrome`
+#### `Cargar la extensión en Chrome`
 
 Una vez creada la extensión, ya podemos cargarla desde nuestro navegador de Google Chrome, así que puedes seguir estos pasos:
 
@@ -105,7 +105,7 @@ Una vez creada la extensión, ya podemos cargarla desde nuestro navegador de Goo
 
 <br>
 
-## `Interacción con el usuario`
+#### `Interacción con el usuario`
 
 Para agregar interacción con el usuario, puedes utilizar JavaScript en la página emergente. Por ejemplo, puedes agregar un botón que cambie el mensaje de bienvenida al hacer clic en él.
 
@@ -177,6 +177,6 @@ aunue tambien hacer peticiones HTTP, leer archivos o modificar la página, pero 
 
 <br>
 
-## `Más Recursos`
+#### `Más Recursos`
 
 [Tutorial Oficial de Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/)
