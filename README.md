@@ -110,7 +110,7 @@ Para agregar interacción con el usuario, puedes utilizar JavaScript en la pági
 
 Para ello nesecitaras crear un archivo de javascript. Aqui voy a dar un simple ejemplo de como  agregando un boton se cambia el mensaje de tu extensión. 
 
-Deberás crear un archivo, por ejemplo `script.js` de la siguiente forma:
+Deberás crear un archivo, por ejemplo `my-script.js` de la siguiente forma:
 
 ```js
   const mensaje = document.querySelector('div')
